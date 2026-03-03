@@ -1,3 +1,5 @@
+//Search for a given value in a linked list
+
 import java.util.*;
 class Node{
     int data;
