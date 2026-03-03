@@ -1,3 +1,4 @@
+//Reverse a singly linked list.
 import java.util.*;
 class Node{
     int data;
