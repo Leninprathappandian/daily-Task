@@ -1,3 +1,5 @@
+//Merge two sorted linked lists into a single sorted list.
+
 import java.util.*;
 class Node{
     int data;
