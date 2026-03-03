@@ -1,3 +1,5 @@
+//Find the nth node from the end of a linked list.
+
 import java.util.*;
 class Node{
     int data;
