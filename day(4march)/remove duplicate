@@ -1,0 +1,64 @@
+//Remove duplicate nodes from an unsorted linked list.
+import java.util.*;
+class Node{
+    Node next;
+    int data;
+    Node(int data){
+        this.data=data;
+        this.next=null;
+    }
+}
+class linked{
+    Node head=null;
+    void insert(int data){
+        Node newNode =new Node(data);
+        if(head==null){
+            head=newNode;
+            return;
+        }
+        Node temp=head;
+        while(temp.next!=null){
+            temp=temp.next;
+        }
+        temp.next=newNode;
+    }
+    void duplicat(){
+        if(head==null)return;
+        Node curr=head;
+        while(curr!=null){
+            Node prev=curr;
+            Node run=curr.next;
+            while(run!=null){
+                if(curr.data==run.data){
+                    prev.next=run.next;
+                }
+                else{
+                    prev=run;
+                }
+                run=run.next;
+            }
+            curr=curr.next;
+        }
+    }
+    void display(){
+        Node temp=head;
+        while(temp!=null){
+           System.out.print(temp.data+" ");
+           temp=temp.next;
+        }
+        System.out.println();
+    }
+}
+public class redup{
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        linked l=new linked();
+        int n=s.nextInt();
+        for(int i=0;i<n;i++){
+            int data=s.nextInt();
+            l.insert(data);
+        }
+        l.duplicat();
+        l.display();
+    }
+}
